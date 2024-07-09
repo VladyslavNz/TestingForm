@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Forum</title>
+</head>
+<body>
+    <h1 id="title">My Testing Forum</h1>
+    <p id="description">Thank you for your message</p>
+    <form  method="post" action="send_mail.php" id="survey-form">
+        <fieldset>
+            <label id="name-label">Name <input type="text" id="name" name="Name" required placeholder="Enter your name"/></label>
+            <label id="email-label">Email <input type="email" id="email" name="Email" required placeholder="Enter your Email"/></label>
+            <label id="number-label">Age <span>(optional)</span><input type="number" name="Age" id="number" min="10" max="120" placeholder="Age"/></label>
+            <label id="role">Which option best describes your current role?
+                <select id="dropdown" name="Role">
+                    <option value="" disabled selected>Choose one</option>
+                    <option value="Student">Student</option>
+                    <option value="Full time">Full time</option>
+                    <option value="Short time">Short time</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>Do you have a Dyplom?</label>
+            <label><input class="inline" name="question" type="radio" checked />Yes</label>
+            <label><input class="inline" name="question" type="radio"/>No</label>
+        </fieldset>
+        <fieldset>
+            <label>What is your favorite feature?</label>
+            <label><input name="feature" class="check" type="checkbox" value="Video" />Video</label>
+            <label><input name="feature" class="check" type="checkbox" value="Images" />Images</label>
+            <label><input name="feature" class="check" type="checkbox" value="Wiki" />Wiki</label>
+            <label><input name="feature" class="check" type="checkbox" value="Forum" />Forum</label>
+        </fieldset>
+        <fieldset>
+            <label for="comm">Any comments or suggestions?</label>
+            <textarea id="comm" name="comm" rows="4" cols="30" placeholder="Please, write something."></textarea>
+        </fieldset>
+        <fieldset>
+            <label><input type="submit" id="submit" value="Submit" /></label>
+        </fieldset>
+    </form>
+</body>
+</html>
